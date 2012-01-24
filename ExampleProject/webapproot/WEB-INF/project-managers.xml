@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <bean scope="singleton" parent="typeManagerBase" class="com.wavemaker.runtime.service.TypeManager" id="typeManager">
+        <property name="types">
+            <map merge="true">
+                <entry key="runtimeService">
+                    <list>
+                        <value>com.wavemaker.runtime.service.PagingOptions</value>
+                        <value>com.wavemaker.runtime.service.PropertyOptions</value>
+                    </list>
+                </entry>
+                <entry key="sakilaDB">
+                    <list>
+                        <value>com.sakiladb.data.Actor</value>
+                        <value>com.sakiladb.data.ActorInfo</value>
+                        <value>com.sakiladb.data.Address</value>
+                        <value>com.sakiladb.data.Category</value>
+                        <value>com.sakiladb.data.City</value>
+                        <value>com.sakiladb.data.Country</value>
+                        <value>com.sakiladb.data.Customer</value>
+                        <value>com.sakiladb.data.CustomerList</value>
+                        <value>com.sakiladb.data.Film</value>
+                        <value>com.sakiladb.data.FilmActor</value>
+                        <value>com.sakiladb.data.FilmCategory</value>
+                        <value>com.sakiladb.data.FilmList</value>
+                        <value>com.sakiladb.data.FilmText</value>
+                        <value>com.sakiladb.data.Inventory</value>
+                        <value>com.sakiladb.data.Language</value>
+                        <value>com.sakiladb.data.NicerButSlowerFilmList</value>
+                        <value>com.sakiladb.data.Payment</value>
+                        <value>com.sakiladb.data.Rental</value>
+                        <value>com.sakiladb.data.SalesByFilmCategory</value>
+                        <value>com.sakiladb.data.SalesByStore</value>
+                        <value>com.sakiladb.data.Staff</value>
+                        <value>com.sakiladb.data.StaffList</value>
+                        <value>com.sakiladb.data.Store</value>
+                        <value>com.sakiladb.data.SalesByStoreId</value>
+                        <value>com.sakiladb.data.SalesByFilmCategoryId</value>
+                        <value>com.sakiladb.data.CustomerListId</value>
+                        <value>com.sakiladb.data.FilmCategoryId</value>
+                        <value>com.sakiladb.data.StaffListId</value>
+                        <value>com.sakiladb.data.NicerButSlowerFilmListId</value>
+                        <value>com.sakiladb.data.FilmActorId</value>
+                        <value>com.sakiladb.data.ActorInfoId</value>
+                        <value>com.sakiladb.data.FilmListId</value>
+                    </list>
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>

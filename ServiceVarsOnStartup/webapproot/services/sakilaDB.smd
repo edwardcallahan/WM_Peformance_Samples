@@ -1,0 +1,29 @@
+{
+	"methods": [{
+		"name": "filmInventory",
+		"operationType": "other",
+		"parameters": [{
+			"name": "fId",
+			"type": "java.lang.Short"
+		}],
+		"returnType": "[com.sakiladb.data.output.FilmInventoryRtnType]"
+	}, {
+		"name": "filmsActors",
+		"operationType": "other",
+		"parameters": [{
+			"name": "fID",
+			"type": "java.lang.Short"
+		}],
+		"returnType": "[com.sakiladb.data.output.FilmsActorsRtnType]"
+	}, {
+		"name": "getCountryById",
+		"operationType": "hqlquery",
+		"parameters": [{
+			"name": "id",
+			"type": "java.lang.Short"
+		}],
+		"returnType": "com.sakiladb.data.Country"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "sakilaDB.json"
+}

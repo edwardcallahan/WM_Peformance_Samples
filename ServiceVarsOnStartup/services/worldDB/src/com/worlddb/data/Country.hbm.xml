@@ -1,0 +1,51 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.worlddb.data.Country" table="Country" dynamic-insert="false" dynamic-update="false">
+        <id name="code" type="string">
+            <column name="Code" length="3"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="52" not-null="true"/>
+        </property>
+        <property name="continent" type="string">
+            <column name="Continent" length="13" not-null="true"/>
+        </property>
+        <property name="region" type="string">
+            <column name="Region" length="26" not-null="true"/>
+        </property>
+        <property name="surfaceArea" type="float">
+            <column name="SurfaceArea" precision="10" not-null="true"/>
+        </property>
+        <property name="indepYear" type="short">
+            <column name="IndepYear"/>
+        </property>
+        <property name="population" type="integer">
+            <column name="Population" not-null="true"/>
+        </property>
+        <property name="lifeExpectancy" type="float">
+            <column name="LifeExpectancy" precision="3"/>
+        </property>
+        <property name="gnp" type="float">
+            <column name="GNP" precision="10"/>
+        </property>
+        <property name="gnpold" type="float">
+            <column name="GNPOld" precision="10"/>
+        </property>
+        <property name="localName" type="string">
+            <column name="LocalName" length="45" not-null="true"/>
+        </property>
+        <property name="governmentForm" type="string">
+            <column name="GovernmentForm" length="45" not-null="true"/>
+        </property>
+        <property name="headOfState" type="string">
+            <column name="HeadOfState" length="60"/>
+        </property>
+        <property name="capital" type="integer">
+            <column name="Capital"/>
+        </property>
+        <property name="code2" type="string">
+            <column name="Code2" length="2" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

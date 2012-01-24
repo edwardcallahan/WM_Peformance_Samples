@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.worlddb.data.City" table="City" dynamic-insert="false" dynamic-update="false">
+        <id name="id" type="integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="35" not-null="true"/>
+        </property>
+        <property name="countryCode" type="string">
+            <column name="CountryCode" length="3" not-null="true"/>
+        </property>
+        <property name="district" type="string">
+            <column name="District" length="20" not-null="true"/>
+        </property>
+        <property name="population" type="integer">
+            <column name="Population" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

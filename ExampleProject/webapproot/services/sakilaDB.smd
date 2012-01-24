@@ -1,0 +1,13 @@
+{
+	"methods": [{
+		"name": "getCountryById",
+		"operationType": "hqlquery",
+		"parameters": [{
+			"name": "id",
+			"type": "java.lang.Short"
+		}],
+		"returnType": "com.sakiladb.data.Country"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "sakilaDB.json"
+}

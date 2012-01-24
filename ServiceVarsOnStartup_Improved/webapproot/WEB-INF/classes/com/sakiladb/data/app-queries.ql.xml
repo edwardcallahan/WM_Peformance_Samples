@@ -1,0 +1,12 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <meta attribute="@design.default-queries"/>
+    <query name="FilmsActors" comment="The actors of a film, by film id">
+        <query-param name="fID" type="java.lang.Short"/>
+        Select actor.firstName, actor.lastName from FilmActor where id.filmId = :fID
+    </query>
+    <query name="FilmInventory">
+        <query-param name="fId" type="java.lang.Short"/>
+        Select store.address.address, store.address.city.city from Inventory where film.filmId = :fId
+    </query>
+</hibernate-mapping>

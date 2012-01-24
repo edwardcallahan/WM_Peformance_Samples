@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" springFile="worldDB.spring.xml" type="DataService" CRUDService="true" class="com.worlddb.WorldDB" id="worldDB">
+    <operation name="getCityById" operationType="hqlquery">
+        <parameter isList="false" typeRef="java.lang.Integer" name="id"/>
+        <return isList="false" typeRef="com.worlddb.data.City"/>
+    </operation>
+    <dataobjects>
+        <dataobject supportsQuickData="true" javaType="com.worlddb.data.City">
+            <element allowNull="false" isList="false" typeRef="java.lang.Integer" name="id">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+                <exclude>insert</exclude>
+            </element>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="name"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="countryCode"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="district"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.Integer" name="population"/>
+        </dataobject>
+        <dataobject supportsQuickData="true" javaType="com.worlddb.data.Country">
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="code">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="name"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="continent"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="region"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.Float" name="surfaceArea"/>
+            <element allowNull="true" isList="false" typeRef="java.lang.Short" name="indepYear"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.Integer" name="population"/>
+            <element allowNull="true" isList="false" typeRef="java.lang.Float" name="lifeExpectancy"/>
+            <element allowNull="true" isList="false" typeRef="java.lang.Float" name="gnp"/>
+            <element allowNull="true" isList="false" typeRef="java.lang.Float" name="gnpold"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="localName"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="governmentForm"/>
+            <element allowNull="true" isList="false" typeRef="java.lang.String" name="headOfState"/>
+            <element allowNull="true" isList="false" typeRef="java.lang.Integer" name="capital"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="code2"/>
+        </dataobject>
+        <dataobject supportsQuickData="true" javaType="com.worlddb.data.CountryLanguage">
+            <element allowNull="false" isList="false" typeRef="com.worlddb.data.CountryLanguageId" name="id">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="isOfficial"/>
+            <element allowNull="false" isList="false" typeRef="java.lang.Float" name="percentage"/>
+        </dataobject>
+        <dataobject supportsQuickData="false" name="id" javaType="com.worlddb.data.CountryLanguageId">
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="countryCode">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+            <element allowNull="false" isList="false" typeRef="java.lang.String" name="language">
+                <require>delete</require>
+                <require>read</require>
+                <require>update</require>
+                <require>insert</require>
+                <noChange>delete</noChange>
+                <noChange>read</noChange>
+                <noChange>update</noChange>
+            </element>
+        </dataobject>
+    </dataobjects>
+</service>

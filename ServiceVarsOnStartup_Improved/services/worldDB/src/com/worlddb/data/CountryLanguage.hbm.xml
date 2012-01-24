@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.worlddb.data.CountryLanguage" table="CountryLanguage" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.worlddb.data.CountryLanguageId">
+            <key-property name="countryCode" type="string">
+                <column name="CountryCode" length="3"/>
+            </key-property>
+            <key-property name="language" type="string">
+                <column name="Language" length="30"/>
+            </key-property>
+        </composite-id>
+        <property name="isOfficial" type="string">
+            <column name="IsOfficial" length="2" not-null="true"/>
+        </property>
+        <property name="percentage" type="float">
+            <column name="Percentage" precision="4" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
